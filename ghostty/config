@@ -1,7 +1,7 @@
 term = xterm-256color
 
 font-family = "MartianMono Nerd Font Mono"
-font-size = 10
+font-size = 12
 
 theme = GruvboxDark
 background-opacity = 0.99
