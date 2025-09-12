@@ -19,7 +19,7 @@ tooltip {
 }
 
 /* Rounded Right */
-#custom-arch, #workspaces, #clock, #network {
+#custom-arch, #workspaces, #clock, #network, #tray {
     border-top-right-radius: 1px;
     border-bottom-right-radius: 1px;
     margin-right: 12px;
@@ -33,7 +33,7 @@ tooltip {
 }
 
 /* Box */
-#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network {
+#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray {
     color: #EBDBB2;
     background: #1D2021;
     font-size: 14px;

@@ -4,7 +4,7 @@
     "gtk-layer-shell": true,
     "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "network"],
+    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray"],
     "custom/arch": {
         "format": " ",
         "tooltip": false
@@ -143,5 +143,11 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         }
+    },
+    "tray": {
+      "icon-size": 19,
+      "spacing": 4,
+      "icons": {
+      }
     }
 }
