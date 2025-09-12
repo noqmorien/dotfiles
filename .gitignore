@@ -15,6 +15,7 @@
 !/bin
 
 !starship.toml
+!tmux.conf
 !.gitignore
 !LICENSE
 !README.md
