@@ -4,14 +4,14 @@ font-family = "MartianMono Nerd Font Mono"
 font-size = 10
 
 theme = GruvboxDark
-background-opacity = 0.98
+background-opacity = 0.99
 background-blur = true
 
 window-vsync = 1
 window-decoration = auto
 window-colorspace = srgb
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 8
+window-padding-y = 8
 
 bold-is-bright = true
 
