@@ -1,0 +1,77 @@
+@define-color base0 #1D2021;
+@define-color base1 #282828;
+@define-color content #EBDBB2;
+@define-color accent ##689D6A;
+@define-color primary #458588;
+
+
+window {
+    padding: 20px;
+    color: transparent;
+    border-color: @primary;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+#input {
+    margin: 12px;
+    padding: 4px;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font: 13px "FantasqueSansM Nerd Font";
+    color: @content;
+    background: @base1;
+    font-weight: 400;
+    border: 1px solid @primary;
+    outline: none;
+}
+
+#input:focus {
+    border-color: @background;
+    outline: none;
+}
+
+#filter {
+}
+
+#inner-box {
+    margin: 8px;
+    background-color: @base0;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: @base0;
+}
+
+#entry {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#entry:selected {
+    background-color: @primary;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+#text {
+    padding-right: 4px;
+    padding-left: 8px;
+    color: @content;
+    font: 13px "FantasqueSansM Nerd Font";
+}
+
+#text:selected {
+    color: @accent;
+}

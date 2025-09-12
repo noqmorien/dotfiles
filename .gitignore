@@ -1,6 +1,18 @@
 /*
 
 
+!/hypr
+!/ghostty
+!/kitty
+!/waybar
+!/wofi
+!/fastfetch
+!/fish/config.fish
+!/wallpaper
+!/scripts
+!/eww
+!/swaync
+!/bin
 
 !starship.toml
 !.gitignore
