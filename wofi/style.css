@@ -19,7 +19,7 @@ window {
     border-radius: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    font: 13px "FantasqueSansM Nerd Font";
+    font: 11px "MartianMono Nerd Font";
     color: @content;
     background: @base1;
     font-weight: 400;
@@ -69,7 +69,7 @@ window {
     padding-right: 4px;
     padding-left: 8px;
     color: @content;
-    font: 13px "FantasqueSansM Nerd Font";
+    font: 11px "MartianMono Nerd Font";
 }
 
 #text:selected {
