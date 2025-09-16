@@ -14,8 +14,10 @@
 !/swaync
 !/bin
 !/foot
+
 !/fish
-fish/fish_variable
+/fish/*
+!/fish/config.fish
 
 !starship.toml
 !tmux.conf
