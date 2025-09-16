@@ -43,7 +43,7 @@ function fish_greeting
         starship init fish | source
     end
 
-    if command -q starship
+    if command -q fastfetch
         fastfetch
     end
 end
