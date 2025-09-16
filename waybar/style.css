@@ -8,10 +8,10 @@
 window#waybar {
     /* background: transparent; */
     background: #1D2021;
+    margin: 0px 12px 0px 12px;
 }
 
 window#waybar > box {
-    margin: 1px 1px 1px 1px;
 }
 
 tooltip {
@@ -37,13 +37,13 @@ tooltip {
     color: #EBDBB2;
     background: #1D2021;
     font-size: 12px;
-    padding: 3px 8px 3px 8px;
+    padding: 4px 6px 4px 6px;
 }
 
 #custom-arch {
-    color: #689d6a;
-    padding-left: 24px;
-    padding-right: 24px;
+    color: #458588;
+    padding-left: 19px;
+    padding-right: 19px;
     font-size: 16px;
 }
 

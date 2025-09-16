@@ -3,10 +3,10 @@
     "reload_style_on_change": true,
     "gtk-layer-shell": true,
     "modules-left": ["custom/arch", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray"],
+    "modules-center": [],
+    "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray", "clock"],
     "custom/arch": {
-        "format": " ",
+        "format": " ",
         "tooltip": false
     },
     "hyprland/workspaces": {
@@ -14,7 +14,7 @@
         "tooltip": false,
         "all-output": false,
         "format-icons": {
-            "active": "<span color='#FB4934'><b></b></span>",
+            "active": "<span color='#458588'><b></b></span>",
             "urgent": "<b></b>",
             "1": "<span color='#458588'><b></b></span>",
             "2": "<span color='#FE8019'><b></b></span>",
@@ -63,7 +63,7 @@
     },
     "disk": {
         "interval": 1,
-        "format": "<span color='#689D6A'></span>  {specific_used:0.2f} GB",
+        "format": "<span color='#458588'></span>  {specific_used:0.2f} GB",
         "unit": "GB",
         "path": "/home"
     },
@@ -86,7 +86,7 @@
     },
     "pulseaudio": {
         "interval": 1,
-        "format": "<span color='#689D6A'>{icon}</span>  {volume}%",
+        "format": "<span color='#458588'>{icon}</span>  {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
