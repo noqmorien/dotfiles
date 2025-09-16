@@ -15,7 +15,7 @@
 !/bin
 !/foot
 !/fish
-!/fish/config.fish
+fish/fish_variable
 
 !starship.toml
 !tmux.conf
