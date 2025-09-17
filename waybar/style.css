@@ -6,8 +6,7 @@
 }
 
 window#waybar {
-    /* background: transparent; */
-    background: #1D2021;
+    background: #232136; /* Rose Pine Moon background */
     margin: 0px 12px 0px 12px;
 }
 
@@ -15,7 +14,8 @@ window#waybar > box {
 }
 
 tooltip {
-    background: #1D2021;
+    background: #232136;
+    color: #e0def4;
 }
 
 /* Rounded Right */
@@ -34,28 +34,32 @@ tooltip {
 
 /* Box */
 #custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray {
-    color: #EBDBB2;
-    background: #1D2021;
+    color: #e0def4; /* Text */
+    background: #232136; /* Background */
     font-size: 12px;
     padding: 4px 6px 4px 6px;
 }
 
+/* Custom Arch */
 #custom-arch {
-    color: #458588;
+    color: #eb6f92; /* Love */
     padding-left: 19px;
     padding-right: 19px;
     font-size: 16px;
 }
 
+/* Workspaces */
 #workspaces button {
     margin-left: 2px;
     margin-right: 2px;
+    color: #c4a7e7; /* Iris default */
 }
 
 #workspaces button:hover {
-    color: #458588;
+    color: #eb6f92; /* Love on hover */
 }
 
 #workspaces button.active {
-    color: #458588;
+    color: #eb6f92; /* Love active */
 }
+
