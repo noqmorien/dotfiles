@@ -1,9 +1,8 @@
-@define-color base0 #1D2021;
-@define-color base1 #282828;
-@define-color content #EBDBB2;
-@define-color accent ##689D6A;
-@define-color primary #458588;
-
+@define-color base0   #232136;
+@define-color base1   #3a3845;
+@define-color content #e0def4;
+@define-color accent  #9ccfd8;
+@define-color primary #eb6f92;
 
 window {
     padding: 20px;
@@ -60,6 +59,7 @@ window {
 
 #entry:selected {
     background-color: @primary;
+    color: @content;
     border: none;
     border-radius: 6px;
     outline: none;
@@ -73,5 +73,5 @@ window {
 }
 
 #text:selected {
-    color: @accent;
+    color: @content;
 }
