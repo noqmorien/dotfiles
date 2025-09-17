@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# request root
+cmd=$1
+gpu_card=card1
+cpu_core=15
+
+declare -A cpu_profile
+cpu_profile["performance_max"]=2000000
+cpu_profile["performance_min"]=2000000
+cpu_profile["performance_governor"]="performance"
+cpu_profile["balance_max"]=1800000
+cpu_profile["balance_min"]=1600000
+cpu_profile["balance_governor"]="ondemand"
+cpu_profile["powersave_max"]=1600000
+cpu_profile["powersave_min"]=1600000
+cpu_profile["powersave_governor"]="powersave"
+
+declare -A gpu_profile
+gpu_profile["performance"]="high"
+gpu_profile["balance"]="auto"
+gpu_profile["powersave"]="low"
+
+# create an file on $HOME/.ppr-accepts to make sure use what
+# this scripts for
+accepts=$HOME/.ppr-accepts
+
+show_warn() {
+    echo "----------------------------------------------"
+    echo " WARNING"
+    echo "----------------------------------------------"
+    echo " This script is for my own laptop only."
+    echo " Hardware: Ryzen 7 5825U with Vega 8 iGPU."
+    echo ""
+    echo " Do not run this on other systems."
+    echo " It may break things or crash your machine."
+    echo "----------------------------------------------"
+}
+
+autoload() {
+    if [ ! -e $accepts ]; then
+        show_warn
+        echo
+        read -p "Do you want to continue and accept the risk? (Y/n)" ans
+        if [ "$ans" = "y" ] || [ "$ans" = "Y" ]; then
+            echo "Accepted at $(date)" > $accepts
+            echo
+            cat $accepts
+        else
+            echo "Aborted"
+        fi
+        exit 1
+    fi
+}
+
+
+show_help() {
+    local params=$1
+    echo
+    echo Unknown command $params
+    echo
+    echo Available commands:
+    echo "        - performance (good for heavy task like compiling or playing video games)"
+    echo "        - balance (good for daily uses)"
+    echo "        - powersaver (underlocking CPU and GPU)"
+}
+
+autoload
+
+fmt_freq() {
+    local val=$1
+    if (( val >= 1000000 )); then
+        awk -v v="$val" 'BEGIN { printf "%.2f GHz", v/1000000 }'
+    else
+        awk -v v="$val" 'BEGIN { printf "%d MHz", v/1000 }'
+    fi
+}
+
+set_profile() {
+    local profile=$1
+    echo "[*] Change the CPU clock speed and governor"
+    for cpu in /sys/devices/system/cpu/cpu[0-cpu_core]*; do
+        echo "${cpu_profile["${profile}_max"]}" | sudo tee "$cpu/cpufreq/scaling_max_freq" > /dev/null
+        echo "${cpu_profile["${profile}_min"]}" | sudo tee "$cpu/cpufreq/scaling_min_freq" > /dev/null
+        echo "${cpu_profile["${profile}_governor"]}" | sudo tee "$cpu/cpufreq/scaling_governor" > /dev/null
+    done
+    echo
+    echo "[+] Max Freq Scaling: $(fmt_freq ${cpu_profile["${profile}_max"]})"
+    echo "[+] Min Freq Scaling: $(fmt_freq ${cpu_profile["${profile}_min"]})"
+    echo "[+] Governor Scaling: ${cpu_profile["${profile}_governor"]}"
+    echo
+    echo "[+] Done change profile to $profile"
+    echo 
+    echo "[*] Change the GPU clock speed"
+    echo ${gpu_profile[${profile}]} | sudo tee /sys/class/drm/card1/device/power_dpm_force_performance_level > /dev/null
+    echo "[+] Gpu profile set to : $(cat /sys/class/drm/card1/device/power_dpm_force_performance_level)"
+}
+
+case $cmd in
+    performance)
+        set_profile performance
+    ;;
+    balance)
+        set_profile balance
+    ;;
+    powersave)
+        set_profile powersave
+    ;;
+    *)
+    show_help
+    ;;
+
+esac
