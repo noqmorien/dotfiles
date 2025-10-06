@@ -1,0 +1,19 @@
+term = xterm-256color
+
+font-family = "Iosevka Nerd Font Mono"
+font-size = 13
+
+theme = Gruvbox Dark
+background-opacity = 8.0
+background-blur = true
+
+confirm-close-surface = false
+
+window-vsync = 0
+window-decoration = auto
+window-colorspace = srgb
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+
+bold-is-bright = true
