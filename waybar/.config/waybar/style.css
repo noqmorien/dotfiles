@@ -62,8 +62,8 @@ tooltip {
 /* Workspaces */
 #workspaces button {
     padding: 4px 1.5px 4px 1.5px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
     color: #cdd6f4; /* Text */
 }
 
@@ -72,6 +72,11 @@ tooltip {
 }
 
 #workspaces button.focused {
+    color: #cba6f7;     /* Red / active */
+    background: #1e1e2e;
+}
+
+#workspaces button.active {
     color: #cba6f7;     /* Red / active */
     background: #1e1e2e;
 }
