@@ -7,7 +7,7 @@ theme = Gruvbox Dark
 background-opacity = 8.0
 background-blur = true
 
-confirm-close-surface = false
+confirm-close-surface = true
 
 window-vsync = 0
 window-decoration = auto

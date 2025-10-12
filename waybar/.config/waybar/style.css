@@ -1,0 +1,85 @@
+* {
+    border: none;
+    font-family: 'MartianMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 11px;
+    min-height: 19px;
+}
+
+window#waybar {
+    background: #1e1e2e;
+    /* background: transparent;  Catppuccin Mocha base */
+}
+
+window#waybar > box {
+    padding: 3px 0px 3px 0px;
+}
+
+tooltip {
+    background: #1e1e2e; /* Base */
+    color: #cdd6f4;      /* Text */
+}
+
+/* Box */
+#custom-arch, #custom-quick-panel, #custom-search, #window, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
+    color: #cdd6f4;      /* Text */
+    background: #1e1e2e; /* Base background */
+    font-size: 13px;
+    padding: 3px 8px 3px 8px;
+}
+
+/* Rounded Right */
+#custom-arch, #workspaces, #clock, #network, #tray {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-right: 12px;
+    padding-right: 21px;
+}
+
+/* Rounded Left */
+#clock, #custom-arch, #workspaces, #tray, #backlight  {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-left: 12px;
+    padding-left: 21px;
+}
+
+#custom-search {
+    font-size: 12px;
+}
+
+/* Custom Arch */
+#custom-arch {
+    color: #a6e3a1; /* Green / Arch logo */
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+}
+
+#workspaces {
+    font-size: 32px;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 4px 1.5px 4px 1.5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #cdd6f4; /* Text */
+}
+
+#workspaces button:hover {
+    background: #313244; /* Surface0 */
+}
+
+#workspaces button.focused {
+    color: #cba6f7;     /* Red / active */
+    background: #1e1e2e;
+}
+
+/* MPRIS */
+#mpris {
+    font-family: 'RobotoMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 13px;
+    color: #89b4fa; /* Blue accent */
+}
+
