@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-    background: #1e1e2e;
+    /* background: #1e1e2e; */
+	background: transparent;
     /* background: transparent;  Catppuccin Mocha base */
 }
 
@@ -36,7 +37,7 @@ tooltip {
 }
 
 /* Rounded Left */
-#clock, #custom-arch, #workspaces, #tray, #backlight  {
+#clock, #custom-arch, #workspaces, #tray, #cpu  {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     margin-left: 12px;

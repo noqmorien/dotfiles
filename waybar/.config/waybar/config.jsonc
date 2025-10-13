@@ -2,9 +2,9 @@
   "layer": "top",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
-  "modules-left": ["custom/arch", "hyprland/workspaces"],
+  "modules-left": ["custom/arch", "sway/workspaces", "tray"],
   "modules-center": [],
-  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network", "clock"],
+  "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "network", "clock"],
 
   "mpris": {
     "format": "{player_icon}  {title} - {artist}",
@@ -19,7 +19,7 @@
   },
 
   "custom/arch": {
-    "format": "<span color='#7287fd'>  </span> ",
+    "format": "<span color='#ee99a0'>  </span> ",
     "tooltip": false
   },
 
