@@ -6,8 +6,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-# set $term foot
-set $term ghostty
+set $term foot
+# set $term ghostty
 set $menu wofi --show drun -n
 set $lock swaylock
 set $osd-server swayosd-server
@@ -29,7 +29,8 @@ exec --no-startup-id swww-daemon
 exec --no-startup-id eww daemon
 exec --no-startup-id waybar
 exec --no-startup-id swaync
-exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
+# exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
+exec --no-startup-id swaybg -i $HOME/.config/wallpaper/main.jpg
 exec swayidle -w \
             timeout 10800 $lock \
             before-sleep $lock
@@ -289,16 +290,16 @@ bindsym XF86PowerOff exec $terminal
 # ====================================
 # Styles
 # ====================================
-default_border pixel 0
+default_border pixel 3
 
 # Gaps
-smart_gaps yes
+smart_gaps no
 gaps inner 8
 gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)
 # client.focused #1e1e2e #1e1e2e #1e1e2e #1e1e2e
-client.focused          #a6e3a1 #a6e3a1 #a6e3a1 #a6e3a1
+client.focused          #f38ba8 #f38ba8 #f38ba8 #f38ba8
 client.focused_inactive #1e1e2e #1e1e2e #1e1e2e #1e1e2e
 client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e
 client.urgent           #f38ba8 #f38ba8 #f38ba8 #f38ba8
@@ -309,74 +310,46 @@ client.urgent           #f38ba8 #f38ba8 #f38ba8 #f38ba8
 # Disable these options if you use
 # original sway
 # ====================================
-
 # Radius
-corner_radius 12
+# corner_radius 12
 
 # Blur
-blur enable
-blur_xray true
-blur_radius 2
-blur_passes 5
-blur_brightness 0.789
-blur_contrast 1.045
-blur_noise 0.0186
+# blur enable
+# blur_xray true
+# blur_radius 2
+# blur_passes 5
+# blur_brightness 0.789
+# blur_contrast 1.045
+# blur_noise 0.0186
 
 # Shadow
-shadows enable
-shadows_on_csd enable
-shadow_offset 2 4
-shadow_color #00000040
-shadow_blur_radius 12
+# shadows enable
+# shadows_on_csd enable
+# shadow_offset 2 4
+# shadow_color #00000040
+# shadow_blur_radius 12
 
-titlebar_separator disable
-scratchpad_minimize disable
-
-layer_effects "waybar" {
-    blur enable
-    blur_radius 2
-    blur_passes 5
-    blur_brightness 0.8596
-    blur_contrast 1.145
-    blur_noise 0.0186
-    blur_xray enable
-    # blur_ignore_transparent enable;
-    shadows disable
-    shadow_offset 3 3
-    shadow_color #1e232655
-    shadow_blur_radius 3
-}
+# titlebar_separator disable
+# scratchpad_minimize disable
 
 # ====================================
 # Windows Rules
 # ====================================
 
 # global opacity
-for_window [app_id=".*"] opacity 0.85;
+# for_window [app_id=".*"] opacity 0.85;
 
 # overwrite gnome applications
-for_window [app_id="org.gnome.*"] opacity 0.9;
-for_window [app_id="wofi"] floating enable; move position center; border none; opacity 0.9;
-for_window [app_id="com.obsproject.Studio"] opacity 1.0;
-for_window [app_id="app.zen_browser.zen"] opacity 1.0
-for_window [app_id="virt-manager"] opacity 1.0
-
-for_window [app_id="foot"] {
-    opacity 1.0
-    blur_brightness 0.0
-}
-
-for_window [app_id="com.mitchellh.ghostty"] {
-    opacity 1.0
-    blur_brightness 0.0
-}
-
-for_window [title="discord"] opacity 0.95
+# for_window [app_id="org.gnome.*"] opacity 0.9;
+# for_window [app_id="wofi"] floating enable; move position center; border none; opacity 0.9;
+# for_window [app_id="com.obsproject.Studio"] opacity 1.0;
+# for_window [app_id="app.zen_browser.zen"] opacity 1.0
+# for_window [app_id="virt-manager"] opacity 1.0
 
 # Floating
-for_window [app_id="java"] floating enable, move position center; opacity 1.0;
-for_window [app_id="nm-connection-editor"] floating enable; move position center; opacity 1.0;
-for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center; opacity 1.0;
+for_window [app_id="java"] floating enable, move position center;
+for_window [app_id="nm-connection-editor"] floating enable; move position center;
+for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center;
 
 
 

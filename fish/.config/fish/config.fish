@@ -13,6 +13,7 @@ function setup_user_path
     fish_add_path ~/.flutter/bin
     # this for personal packages
     fish_add_path /opt/pkgs/bin
+    fish_add_path /opt/nvim-linux-x86_64/bin
 end
 
 function setup_aliases
