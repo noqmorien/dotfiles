@@ -45,7 +45,7 @@ function setup_aliases
         # alias ll="eza --git --git-repos --icons --long --header --smart-group"
         # alias ls="eza --git --git-repos --icons --smart-group"
         alias ll="eza --icons --long --header --smart-group"
-        alias ls="eza --icons --smart-group"
+        alias ls="eza --icons --long --smart-group"
     end
 
     if command -q exa

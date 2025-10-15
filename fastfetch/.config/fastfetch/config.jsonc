@@ -8,11 +8,12 @@
         }
     },
     "logo": {
-        "source": "~/.config/fastfetch/logo.txt",
+        "type": "small",
+        // "source": "~/.config/fastfetch/logo.txt",
         "height": 6,
         "padding": {
-            "top": 0,
-            "left": 3,
+            "top": 3,
+            "left": 6,
             "right": 12
         }
     },
