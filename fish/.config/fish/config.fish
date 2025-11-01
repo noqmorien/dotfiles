@@ -14,6 +14,13 @@ function setup_user_path
     # this for personal packages
     fish_add_path /opt/pkgs/bin
     fish_add_path /opt/nvim-linux-x86_64/bin
+
+    set -e ANDROID_HOME
+    set -e ANDROID_SDK_ROOT
+    set -x ANDROID_HOME $HOME/Android/Sdk
+    set -x ANDROID_SDK_ROOT $ANDROID_HOME
+    # set -e PATH $PATH
+    set -x PATH $ANDROID_HOME/cmdline-tools/latest/bin $ANDROID_HOME/platform-tools $PATH
 end
 
 function setup_aliases
