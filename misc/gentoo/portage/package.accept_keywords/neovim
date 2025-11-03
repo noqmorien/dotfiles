@@ -1,0 +1,3 @@
+app-editors/neovim ~amd64
+dev-libs/tree-sitter-c ~amd64
+dev-libs/tree-sitter-vim ~amd64
