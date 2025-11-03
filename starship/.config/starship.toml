@@ -47,7 +47,7 @@ format = "$all_status$ahead_behind"
 
 [hostname]
 ssh_only = false
-format =  "on [󰣨](bold purple) [$hostname](bold magenta) "
+format =  "on [󰣨](bold white) [$hostname](bold magenta) "
 trim_at = ".localdomain"
 disabled = false
 
