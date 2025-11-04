@@ -1,4 +1,0 @@
-media-sound/easyeffects calf -doc
-# required by media-sound/easyeffects-7.2.3::gentoo[calf]
-# required by media-sound/easyeffects (argument)
->=media-plugins/calf-0.90.8 lv2

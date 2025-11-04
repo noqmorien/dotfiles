@@ -1,0 +1,1 @@
+kde-misc/kdeconnect X -bluetooth -debug pulseaudio -selinux -telephony -test -zeroconf
