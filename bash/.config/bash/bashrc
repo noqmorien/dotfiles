@@ -1,0 +1,70 @@
+shopt -s autocd
+shopt -s promptvars
+
+setup_user_path() {
+    export ANDROID_HOME="$HOME/Android/Sdk"
+    export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
+    export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+    export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bun/bin:$HOME/.flutter/bin:/opt/pkgs/bin:$PATH"
+    export PATH="$HOME/.spicetify:$PATH"
+}
+
+setup_autocompletion() {
+    if command -v doas >/dev/null 2>&1; then
+        complete -F _root_command doas
+    fi
+
+    if command -v tmux >/dev/null 2>&1; then
+        complete -F _root_command tmux
+    fi
+}
+
+setup_aliases() {
+    
+    alias ..="cd .."
+
+    if command -v nvim >/dev/null 2>&1; then
+        alias v='nvim'
+    fi
+
+    if command -v distrobox >/dev/null 2>&1; then
+        alias dc='distrobox create'
+        alias de='distrobox enter'
+        alias ds='podman kill'
+    fi
+
+    if command -v fnm >/dev/null 2>&1; then
+        eval "$(fnm env --use-on-cd)"
+    fi
+
+    if command -v tmux >/dev/null 2>&1; then
+        alias tm='tmux'
+        alias tma='tmux attach'
+    fi
+
+    if command -v bat >/dev/null 2>&1; then
+        alias cat='bat --paging=never --style=plain --color=auto'
+    fi
+
+    if command -v eza >/dev/null 2>&1; then
+        alias ll='eza --git --icons --long --header --smart-group'
+        alias ls='eza --git --icons --header --smart-group'
+    elif command -v exa >/dev/null 2>&1; then
+        alias ll='exa --git --git-repos --icons --long --header --smart-group'
+        alias ls='exa --git --git-repos --icons --smart-group'
+    fi
+}
+
+setup_user_path
+setup_aliases
+setup_autocompletion
+
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init bash)"
+fi
+
