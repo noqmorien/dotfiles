@@ -13,6 +13,9 @@ set $menu wofi --show drun -n
 set $lock swaylock
 set $osd-server swayosd-server
 set $osd swayosd-client
+set $theme-colorscheme 'Adwaita-dark'
+set $theme-icons 'Qogir'
+
 
 
 # ====================================
@@ -28,7 +31,7 @@ exec --no-startup-id pipewire
 # exec --no-startup-id nm-applet
 # exec --no-startup-id swww-daemon
 # exec --no-startup-id eww daemon
-exec --no-startup-id dbus-run-session waybar
+exec --no-startup-id waybar
 exec --no-startup-id swaync
 # exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
 exec --no-startup-id swaybg -i $HOME/.config/wallpaper/main.jpg
@@ -37,10 +40,12 @@ exec swayidle -w \
             before-sleep $lock
 exec --no-startup-id $osd-server
 
-# exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 # part of sway fix session issues
 exec_always --no-startup-id dbus-update-activation-environment --all
 # exec_always --no-startup-id eww daemon
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme $theme-colorscheme
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $theme-icons
 
 
 
