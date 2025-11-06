@@ -1,0 +1,9 @@
+gui-apps/grim
+gui-apps/slurp
+gui-wm/sway
+gui-apps/swaybg
+gui-apps/swayidle
+gui-apps/waybar
+gui-apps/wofi
+x11-misc/lightdm
+lxde-base/lxappearance

@@ -1,0 +1,8 @@
+sys-devel/gcc
+sys-devel/binutils
+# sys-devel/llvm       # optional, kalau pakai clang
+
+virtual/libc
+virtual/os-headers
+
+virtual/pkgconfig

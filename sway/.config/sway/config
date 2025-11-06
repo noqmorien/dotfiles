@@ -26,18 +26,18 @@ set $osd swayosd-client
 
 exec --no-startup-id pipewire 
 # exec --no-startup-id nm-applet
-exec --no-startup-id swww-daemon
-exec --no-startup-id eww daemon
-exec --no-startup-id waybar
-exec --no-startup-id swaync
+# exec --no-startup-id swww-daemon
+# exec --no-startup-id eww daemon
+exec --no-startup-id dbus-run-session waybar
+# exec --no-startup-id swaync
 # exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
 exec --no-startup-id swaybg -i $HOME/.config/wallpaper/main.jpg
 exec swayidle -w \
             timeout 10800 $lock \
             before-sleep $lock
-exec --no-startup-id $osd-server
+# exec --no-startup-id $osd-server
 
-exec_always --no-startup-id autotiling
+# exec_always --no-startup-id autotiling
 # part of sway fix session issues
 exec_always --no-startup-id dbus-update-activation-environment --all
 # exec_always --no-startup-id eww daemon
