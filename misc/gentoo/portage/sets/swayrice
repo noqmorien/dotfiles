@@ -1,10 +1,15 @@
+gui-wm/sway
 gui-apps/grim
 gui-apps/slurp
-gui-wm/sway
 gui-apps/swaybg
 gui-apps/swayidle
+gui-apps/swayosd
+gui-apps/swaylock
+gui-apps/swaync
 gui-apps/waybar
 gui-apps/wofi
+app-misc/brightnessctl
 x11-misc/pcmanfm
 x11-misc/lightdm
+x11-libs/libnotify
 lxde-base/lxappearance

@@ -29,13 +29,13 @@ exec --no-startup-id pipewire
 # exec --no-startup-id swww-daemon
 # exec --no-startup-id eww daemon
 exec --no-startup-id dbus-run-session waybar
-# exec --no-startup-id swaync
+exec --no-startup-id swaync
 # exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
 exec --no-startup-id swaybg -i $HOME/.config/wallpaper/main.jpg
 exec swayidle -w \
             timeout 10800 $lock \
             before-sleep $lock
-# exec --no-startup-id $osd-server
+exec --no-startup-id $osd-server
 
 # exec_always --no-startup-id autotiling
 # part of sway fix session issues
@@ -279,10 +279,10 @@ bindsym --locked XF86MonBrightnessDown exec $osd --brightness=-2
 bindsym --locked XF86MonBrightnessUp exec $osd --brightness=+2
 
 # Special key to take a screenshot with grim
-bindsym $mod+Print exec  $HOME/.local/bin/voidot ss --full
-bindsym Print exec  $HOME/.local/bin/voidot ss --full-select
-bindsym Shift+Print exec  $HOME/.local/bin/voidot ss --save-full
-bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
+bindsym $mod+Print exec  $HOME/.local/bin/hyprdot ss --full
+bindsym Print exec  $HOME/.local/bin/hyprdot ss --full-select
+bindsym Shift+Print exec  $HOME/.local/bin/hyprdot ss --save-full
+bindsym $mod+Shift+Print exec  $HOME/.local/bin/hyprdot ss --save-select
 bindsym XF86PowerOff exec $terminal
 
 
