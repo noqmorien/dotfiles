@@ -1,0 +1,11 @@
+gui-apps/waybar libinput logind pipewire pulseaudio udev upower -evdev -experimental jack mpd mpris network sndio -systemd -test tray wifi
+# required by gui-apps/waybar-0.12.0::gentoo[tray]
+# required by waybar (argument)
+>=dev-libs/libdbusmenu-16.04.0-r4 gtk3
+
+# required by media-sound/pulseaudio-daemon-17.0-r1::gentoo[alsa,alsa-plugin]
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-bin-144.0.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-plugins/alsa-plugins-1.2.12 pulseaudio
