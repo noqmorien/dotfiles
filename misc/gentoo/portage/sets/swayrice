@@ -13,4 +13,4 @@ x11-misc/pcmanfm
 x11-misc/lightdm
 x11-misc/autotiling
 x11-libs/libnotify
-lxde-base/lxappearance
+# lxde-base/lxappearance

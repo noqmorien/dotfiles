@@ -19,7 +19,7 @@
   },
 
   "custom/arch": {
-    "format": "<span color='#ee99a0'>  </span> ",
+    "format": "<span color='#dce0e8'> 󰣨 </span> ",
     "tooltip": false
   },
 

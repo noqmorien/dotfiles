@@ -6,8 +6,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty
-# set $term foot
+# set $term kitty
+set $term foot
 # set $term ghostty
 set $menu wofi --show drun -n
 set $lock swaylock
@@ -23,11 +23,19 @@ set $theme-icons 'Qogir'
 # ====================================
 
 # sway session issues
-# exec --no-startup-id xdg-desktop-portal
-# exec --no-startup-id xdg-desktop-portal-wlr
-# exec --no-startup-id xdg-desktop-portal-gtk
+set $portal_env export XDG_CURRENT_DESKTOP=sway && export XDG_SESSION_TYPE=wayland && export GTK_USE_PORTAL=1
+exec_always --no-startup-id $portal_env
+exec_always --no-startup-id dbus-update-activation-environment --all
+
+# xdg-desktop-portal
+# is only works on gentoo or non systemd like void
+# change the paths
+exec --no-startup-id sleep 0.5 && /usr/libexec/xdg-desktop-portal-wlr
+exec --no-startup-id sleep 0.5 && /usr/libexec/xdg-desktop-portal
+# exec --no-startup-id /usr/libexec/xdg-desktop-portal-gtk
 
 exec --no-startup-id pipewire 
+exec --no-startup-id wireplumber 
 # exec --no-startup-id nm-applet
 # exec --no-startup-id swww-daemon
 # exec --no-startup-id eww daemon
@@ -41,10 +49,9 @@ exec swayidle -w \
 exec --no-startup-id $osd-server
 
 exec_always --no-startup-id autotiling
-# part of sway fix session issues
-exec_always --no-startup-id dbus-update-activation-environment --all
 # exec_always --no-startup-id eww daemon
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme $theme-colorscheme
+exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme $theme-colorscheme
 exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $theme-icons
 
 
@@ -296,11 +303,11 @@ bindsym XF86PowerOff exec $terminal
 # ====================================
 # Styles
 # ====================================
-default_border pixel 3
+default_border pixel 2
 
 # Gaps
 smart_gaps no
-gaps inner 8
+gaps inner 4
 gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)

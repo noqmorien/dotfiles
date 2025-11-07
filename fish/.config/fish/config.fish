@@ -68,6 +68,9 @@ function fish_greeting
         starship init fish | source
         enable_transience
     end
+    if command -q zoxide
+        zoxide init fish | source
+    end
     if command -q fzf 
         fzf --fish | source
     end

@@ -1,1 +1,2 @@
 gui-libs/gtk4-layer-shell introspection vala
+media-libs/mesa vulkan -llvm -opencl
