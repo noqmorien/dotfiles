@@ -1,1 +1,2 @@
 media-libs/mesa vaapi vdpau -llvm -opencl
+x11-libs/libdrm video_cards_amdgpu video_cards_radeon
