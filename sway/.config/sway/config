@@ -13,8 +13,8 @@ set $menu wofi --show drun -n
 set $lock swaylock
 set $osd-server swayosd-server
 set $osd swayosd-client
-set $theme-colorscheme 'Adwaita-dark'
-set $theme-icons 'Qogir'
+set $theme-colorscheme 'Catppuccin-Dark-Compact'
+set $theme-icons 'Catppuccin-Mocha-Alt2'
 
 
 

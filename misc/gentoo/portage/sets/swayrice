@@ -13,4 +13,5 @@ x11-misc/pcmanfm
 x11-misc/lightdm
 x11-misc/autotiling
 x11-libs/libnotify
+x11-themes/gtk-engines-murrine
 # lxde-base/lxappearance
