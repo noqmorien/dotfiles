@@ -1,1 +1,1 @@
-media-libs/mesa vaapi vdpau xa -llvm -opencl
+media-libs/mesa vaapi vdpau -llvm -opencl
