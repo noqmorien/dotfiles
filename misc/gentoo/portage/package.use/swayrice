@@ -3,6 +3,9 @@ gui-apps/waybar libinput logind pipewire udev upower -evdev -experimental -jack 
 # required by waybar (argument)
 >=dev-libs/libdbusmenu-16.04.0-r4 gtk3
 
+gui-apps/swaybg gdk-pixbuf
+gui-apps/swaync -pulseaudio
+
 gui-libs/gtk4-layer-shell introspection vala
-media-libs/mesa vulkan -llvm -opencl
+
 x11-themes/gtk-engines-murrine -animation-rtl

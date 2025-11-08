@@ -1,0 +1,2 @@
+media-libs/libcanberra udev alsa
+media-sound/pulseaudio-daemon alsa alsa-plugin udev
