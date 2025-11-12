@@ -37,7 +37,7 @@ tooltip {
 }
 
 /* Rounded Left */
-#clock, #custom-arch, #workspaces, #tray, #cpu  {
+#clock, #custom-arch, #workspaces, #tray, #backlight  {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     margin-left: 12px;

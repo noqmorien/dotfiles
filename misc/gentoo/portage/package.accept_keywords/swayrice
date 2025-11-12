@@ -9,4 +9,6 @@ x11-misc/pcmanfm ~amd64
 x11-misc/autotiling ~amd64
 dev-python/i3ipc ~amd64
 x11-libs/libfm ~amd64
+app-misc/nwg-look ~amd64
+x11-apps/xcur2png ~amd64
 

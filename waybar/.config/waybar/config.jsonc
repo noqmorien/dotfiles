@@ -4,7 +4,7 @@
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces", "tray"],
   "modules-center": [],
-  "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "network", "clock"],
+  "modules-right": ["backlight", "pulseaudio", "battery", "network", "clock"],
 
   "mpris": {
     "format": "{player_icon}  {title} - {artist}",
