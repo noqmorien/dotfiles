@@ -1,2 +1,2 @@
-# sys-devel/gcc lto pgo
-# sys-devel/binutils pgo
+sys-devel/gcc lto pgo
+sys-devel/binutils pgo
