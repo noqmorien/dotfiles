@@ -366,7 +366,7 @@ font pango:Iosevka Nerd Font 10
 # for_window [app_id="wofi"] floating enable; move position center; border none; opacity 0.9;
 # for_window [app_id="com.obsproject.Studio"] opacity 1.0;
 # for_window [app_id="app.zen_browser.zen"] opacity 1.0
-for_window [app_id="foot"] opacity 0.85
+for_window [app_id="foot"] opacity 0.98
 for_window [app_id="firefox-bin"] opacity 1.0
 # for_window [app_id="virt-manager"] opacity 1.0
 

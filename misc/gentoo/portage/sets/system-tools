@@ -6,6 +6,7 @@ sys-process/btop
 app-shells/fzf
 app-shells/zoxide
 app-admin/stow
+app-misc/tmux
 dev-util/github-cli
 gui-apps/wl-clipboard
 

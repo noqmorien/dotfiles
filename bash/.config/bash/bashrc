@@ -48,11 +48,11 @@ setup_aliases() {
     fi
 
     if command -v eza >/dev/null 2>&1; then
-        alias ll='eza --git --icons --long --header --smart-group'
-        alias ls='eza --git --icons --header --smart-group'
+        alias ll='eza --git --icons --long --header --smart-group --group'
+        alias ls='eza --git --icons --header --smart-group --group'
     elif command -v exa >/dev/null 2>&1; then
-        alias ll='exa --git --git-repos --icons --long --header --smart-group'
-        alias ls='exa --git --git-repos --icons --smart-group'
+        alias ll='exa --git --git-repos --icons --long --header --smart-group --group'
+        alias ls='exa --git --git-repos --icons --smart-group --group'
     fi
 }
 
