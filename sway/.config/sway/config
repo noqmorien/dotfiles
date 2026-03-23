@@ -16,13 +16,15 @@ set $osd swayosd-client
 set $theme-colorscheme 'Adwaita-dark'
 set $theme-icons 'bessurf-blue'
 
-
 # ====================================
 # Autostart
 # ====================================
 
 # sway session issues
-exec_always --no-startup-id dbus-update-activation-environment --all
+# exec_always --no-startup-id dbus-update-activation-environment --all
+exec dbus-update-activation-environment --all XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway DISPLAY
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DISPLAY
+
 
 # xdg-desktop-portal
 # is only works on gentoo or non systemd like void
@@ -50,7 +52,7 @@ exec_always --no-startup-id autotiling
 # exec_always --no-startup-id eww daemon
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme $theme-colorscheme
 exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme $theme-colorscheme
-# exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $theme-icons
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $theme-icons
 exec --no-startup-id brightnessctl --restore
 
 
