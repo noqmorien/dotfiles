@@ -99,6 +99,8 @@ output eDP-1 resolution 1920x1080 position 1920,0
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
 input type:touchpad {
+    pointer_accel 0.45
+    accel_profile flat
     tap enabled
     drag enabled
     drag_lock disabled
