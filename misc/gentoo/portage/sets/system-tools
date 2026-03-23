@@ -1,0 +1,12 @@
+sys-apps/ripgrep
+sys-apps/bat
+sys-apps/eza
+sys-apps/bleachbit
+sys-process/btop
+app-shells/fzf
+app-shells/zoxide
+app-admin/stow
+dev-util/github-cli
+gui-apps/wl-clipboard
+
+dev-util/rocm-smi

@@ -1,0 +1,7 @@
+app-shells/zsh
+app-shells/gentoo-zsh-completions
+app-shells/zsh-autosuggestions
+app-shells/zsh-completions
+app-shells/zsh-history-substring-search
+app-shells/zsh-syntax-highlighting
+

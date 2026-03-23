@@ -1,0 +1,57 @@
+window {
+    padding: 20px;
+    border-radius: 0px;
+}
+
+#input {
+    margin: 12px;
+    padding: 4px;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font: 11px "MartianMono Nerd Font";
+    font-weight: 400;
+    border: 1px solid;
+    outline: none;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#filter {
+}
+
+#inner-box {
+    margin: 8px;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+}
+
+#entry {
+    padding: 12px 24px 12px 24px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    border-radius: 0;
+}
+
+#entry:selected {
+    /* padding: 8px 24px 8px 24x; */
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+#text {
+    padding-right: 4px;
+    padding-left: 8px;
+    font: 11px "Iosevka Nerd Font";
+}
+
+#text:selected {
+}
+
