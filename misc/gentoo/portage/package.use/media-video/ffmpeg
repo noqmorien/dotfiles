@@ -1,1 +1,2 @@
 media-video/ffmpeg -sdl openh264 x265 rav1e lv2 codec2 bluray theora opus svt-av1
+media-video/ffmpeg vaapi v4l vpx lame libaom aom openssl -gnutls mp3 fdk x264 x265 vpx vorbis opus ogg xvid amr amrenc fribidi libass libplacebo fontconfig freetype dav1d librtmp srt ssh postproc
